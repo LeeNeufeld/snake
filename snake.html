@@ -1,47 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title></title>
-    <style>
-      html,
-      body {
-        height: 100%;
-        margin: 0;
-      }
-      body {
-        background: black;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-      canvas {
-        border: 1px solid white;
-      }
-      #p1 {
-        color: red;
-        position: absolute;
-        left: 100px;
-        top: 10px;
-      }
-      #p2 {
-        color: red;
-        position: absolute;
-        left: 100px;
-        top: 30px;
-      }
-      #score {
-        color: yellow;
-        position: absolute;
-        left: 155px;
-        top: 10px;
-      }
-      #high {
-        color: yellow;
-        position: absolute;
-        left: 195px;
-        top: 30px;
-      }
-    </style>
+    <title>Snake</title>
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <p id="p1">SCORE:</p>
@@ -85,7 +46,7 @@
       function loop() {
         requestAnimationFrame(loop);
         // slow game loop to 15 fps instead of 60 (60/15 = 4)
-        if (++count < 4) {
+        if (++count < 6) {
           return;
         }
         count = 0;
